@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.min-3.3.4.css" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="assets/js/jquery-2.1.3.min.js"></script>
+    <script src="assets/js/bootstrap.min-3.3.4.js"></script>
+    <style>
+        body
+        {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
+        .customer
+        {
+            background-color: #338065;
+            width: 120px;
+            height: 50px;
+            border: 1px solid black;
+            box-shadow: 10px 10px 5px #888888;
+            border-radius: 10px;
+            vertical-align: middle;
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            var $modal = $('.modal').modal({
+                show: false
+            });
+            $('#cust1').on('click', function() {
+                $('#modal-header-content').empty();
+                $('#modal-header-content').html('Customer 1');
+                $('.modal-body').empty(); // clear the body of any old content
+                var p_element = document.createElement('p');
+                p_element.innerHTML = "This is text added dynamically and could be got from data of a ajax call";
+                $('.modal-body').append(p_element);
+                p_element = document.createElement('p');
+                p_element.innerHTML = 'Dat body 0_o';
+                $('.modal-body').append(p_element);
+                $modal.modal('show');
+            });
+            $('#cust2').on('click', function() {
+                $('#modal-header-content').empty();
+                $('#modal-header-content').html('Customer 2');
+                $('.modal-body').empty(); // clear the body of any old content
+                var p_element = document.createElement('p');
+                p_element.innerHTML = "This is text added dynamically and could be got from data of a ajax call";
+                $('.modal-body').append(p_element);
+                p_element = document.createElement('p');
+                p_element.innerHTML = 'Dat body 0_o';
+                $('.modal-body').append(p_element);
+                $modal.modal('show');
+            });
+        })
+    </script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Hot divs -->
+    <div id = 'cust1' class="customer">Customer 1</div>
+    <div id = 'cust2' class="customer">Customer 2</div>
+    
+    <!-- Hidden modal dialog -->
+    <div class="modal hide fade">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 id = "modal-header-content"></h3> 
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn" data-dismiss="modal">Close</a>
+        </div>
+    </div>
+
+
+</div> <!-- /container -->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+</body>
+</html>

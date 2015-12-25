@@ -1,0 +1,77 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+  Name:
+  <input type="text" id='name' data-bind="#name-label" />
+  
+  <br> Name = <span id="name-label"></span>
+  
+  <script src="assets/js/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript">
+
+  //if (Object.hasOwnProperty('observe')) {
+
+    //console.log('Object > hasOwnProperty == \'observe\'');
+    /*
+    function bindObjPropToDomElem(obj, property, domElem) { 
+      Object.observe(obj, function(changes){    
+        changes.forEach(function(change) {
+          $(domElem).text(obj[property]);        
+        });
+      });  
+    }
+
+    function bindDomElemToObjProp(obj, propertyName, domElem) {  
+      $(domElem).change(function() {
+        obj[propertyName] = $(domElem).val();
+        console.log(obj);
+      });
+    }
+
+    function bindModelView(obj, propertyName, domElem) {  
+      bindObjPropToDomElem(obj, propertyName, domElem)
+      bindDomElemToObjProp(obj, propertyName, domElem)
+    }
+    user = {};
+    user.name = '';
+    bindModelView(user, 'name', '#name');
+    */
+
+  //}else{
+    //console.log('Object > hasOwnProperty != \'observe\'');
+
+    function bindModelInput(obj, property, domElem) {
+      Object.defineProperty(obj, property, {
+        get: function() { 
+          return domElem.value; 
+        }, 
+        set: function(newValue) { 
+          domElem.value = newValue;
+        },
+        configurable: true
+      });
+      domElem.onchange = function() { 
+        alert('changed');
+      }
+    }
+
+    user = {};
+    inputElem = document.getElementById("name");
+    bindModelInput(user,'name',inputElem);
+
+    user.name = "Joe";
+    alert("input value is now "+inputElem.value) //input is now 'Joe';
+
+    inputElem.value = 'Bob';
+    alert("user.name is now "+user.name) //model is now 'Bob';
+
+  //}
+  </script>
+
+</body>
+
+</html>

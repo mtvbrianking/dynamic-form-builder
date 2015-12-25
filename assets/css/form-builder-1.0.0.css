@@ -1,0 +1,217 @@
+.form-builder { /* .builder */
+	margin-top: 50px;
+	padding: 5px;
+	background-color: #eee;
+}
+
+.build-tools, .form-preview {
+	padding: 5px;
+}
+
+.build-tools {
+	background-color: #eee;
+}
+
+.form-preview {
+	background-color: #fff;
+}
+
+.build-tools {
+	text-align: center;
+}
+
+.build-tools button:hover {
+	cursor: move;
+}
+
+.new-element {
+	width: 45%;
+	margin-bottom: 5px;
+}
+
+.new-element:focus {
+	outline: 0;
+	background-color: #fff;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+.sortable {
+	min-height: 100px;
+}
+
+.field-title {
+	color: #0A0A0A;
+}
+
+.field-help {
+	color: #0D0D0D;
+}
+
+.field-required-star {
+	color: red;
+}
+
+.field-title {
+	font-weight: bold;
+}
+
+.field-title, .field-help {
+	display: block;
+}
+
+.field-group {
+	padding: 5px 15px;
+	margin: 5px 0px;
+	position: relative;
+}
+
+.field-group:hover {
+	cursor: move;
+	background-color: #eee;
+}
+
+.field-group:hover .controls {
+	display: block;
+}
+
+.selected {
+	background-color: #ddd;
+}
+
+.controls {
+	top: 5px;
+	right: 5px;
+	display: none;
+	position: absolute;
+}
+
+.controls>span {
+	padding: 4px;
+	background-color: #fff;
+}
+
+.field-group .settings {
+	display: none;
+	padding: 25px 10px 10px 10px;
+	min-height: 150px;
+	border: dotted 2px #fff;
+}
+
+.form-horizontal .control-label {
+	text-align: left;
+}
+
+.controls>span:hover {
+	cursor: pointer;
+}
+
+:disabled:hover {
+	cursor: move;
+}
+
+#form-title {
+	font-size: 20px;
+}
+
+#form-title, #form-description {
+	border: 0;
+	outline: 0;
+	color: #0A0A0A;
+}
+
+#form-title:hover, #form-description:hover {
+	
+}
+
+#form-title:focus, #form-description:focus {
+	border: 1px solid #4888EF;
+}
+
+.ui-sortable-placeholder {
+	height: 100px;
+	width: 100%;
+	background: #EBEBEB;
+	border: 2px dashed #999;
+}
+
+.ui-sortable-drag {
+	height: 100px;
+	width: 300px;
+	background: red;
+}
+
+.panel-group {
+	margin-bottom: 0;
+}
+
+.panel-heading .accordion-toggle:after {
+	font-family: 'Glyphicons Halflings';
+	content: "\2212";
+	float: left;
+	color: #ddd;
+}
+
+.panel-heading a:hover {
+	text-decoration: none;
+}
+
+.panel-heading .accordion-toggle.collapsed:after {
+	content: "\2b";
+}
+
+/* customize radio buttons look like checkboxes */
+.select input[type="radio"] {
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    -ms-appearance: checkbox;     /* not currently supported */
+    -o-appearance: checkbox;      /* not currently supported */
+}
+
+/* increase checkbox size */
+.checkbox.custom input[type=checkbox] { 
+	width: 20px; 
+	height: 20px;
+}
+
+/* increase radio button size */
+.radio.custom input[type=radio] { 
+	width: 20px; 
+	height: 20px;
+}
+
+/* hack to fix inline form nested in horizonatl form from spilling over */
+.options .form-horizontal .form-inline {
+	/*display: inline-block;*/
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}

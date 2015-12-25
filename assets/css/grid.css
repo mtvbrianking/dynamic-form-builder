@@ -1,0 +1,10 @@
+body {
+    margin: 10px;
+}
+.rowCell {
+    background: white;
+    padding: 4px;
+}
+.rowCell img {
+    width: 100%;
+}
